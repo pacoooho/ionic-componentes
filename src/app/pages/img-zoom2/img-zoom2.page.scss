@@ -1,0 +1,43 @@
+.zoom-image {
+    width: 100%;
+    height: 300px;
+    background: red;
+    margin: 0 0 16px;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: absolute;
+      width: auto;
+      height: auto;
+    }
+  }
+  .zoom-controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    .zoom {
+      display: inline-block;
+      min-width: 30px;
+      height: 30px;
+      background: grey;
+    }
+    .zoom-in {
+      background: green;
+    }
+    .zoom-out {
+      background: red;
+    }
+    .zoom-reset {
+      background: yellow;
+    }
+  }
+  .zoom0 {
+    width: 300px;
+    height: 200px;
+  }
+  .zoom1 {
+    width: 500px;
+    height: 100px;
+  }
+  

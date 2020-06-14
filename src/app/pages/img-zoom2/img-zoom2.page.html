@@ -1,0 +1,13 @@
+<app-header [titulo]="titulo || 'Image Zoom2'"></app-header>
+
+
+<ion-content>
+    <div [class]="'zoom-image zoom' + i" *ngFor="let image of images; let i = index;">
+        <div class="zoom-controls">
+          <button class="zoom zoom-in" (click)="zoomImage.zoomIn()">+</button>
+          <button class="zoom zoom-out" (click)="zoomImage.zoomOut()">-</button>
+          <button class="zoom zoom-reset" (click)="zoomImage.resetZoom()">reset</button>
+        </div>
+        <img #zoomImage="zoom-image" zoom-image [src]="image.url" [zoom-initial-fit]="image?.fits" />
+      </div>
+</ion-content>

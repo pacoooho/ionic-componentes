@@ -1,0 +1,42 @@
+<app-header [titulo]="titulo || 'alert page'"></app-header>
+<!-- <ion-header> 
+  <ion-toolbar>
+    <ion-buttons slot = "start">
+      <ion-back-button text = "Regresar"  defaultHref="/inicio"></ion-back-button>
+    </ion-buttons>
+    <ion-title>alert</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <ion-card (click)="presentAlert($event)">
+    <ion-item>
+      presentAlert: {{presentAlertCantida}} times
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentAlertMultipleButtons($event)">
+    <ion-item>
+      presentAlertMultipleButtons: {{presentAlertMultipleButtonsCantidad}} times
+  </ion-item>
+  </ion-card>
+  <ion-card (click)="presentAlertConfirm($event)">
+    <ion-item>
+      presentAlertConfirm: {{presentAlertConfirmCantidad}} times
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentAlertPrompt($event)">
+    <ion-item>
+      presentAlertPrompt: {{presentAlertPromptCantidad}} times
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentAlertRadio($event)">
+    <ion-item>
+      presentAlertRadio: {{presentAlertRadioCantidad}} times
+    </ion-item>
+  </ion-card>
+  <ion-card (click)="presentAlertCheckbox($event)">
+    <ion-item>
+      presentAlertCheckbox: {{presentAlertCheckboxCantidad}} times
+    </ion-item>
+  </ion-card>
+</ion-content>

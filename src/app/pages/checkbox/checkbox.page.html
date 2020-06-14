@@ -1,0 +1,40 @@
+<app-header [titulo]="titulo || 'alert page'"></app-header>
+
+
+<ion-content>
+<!-- Default Checkbox -->
+<ion-checkbox></ion-checkbox>
+
+<!-- Disabled Checkbox -->
+<ion-checkbox disabled="true"></ion-checkbox>
+
+<!-- Checked Checkbox -->
+<ion-checkbox checked="true"></ion-checkbox>
+
+<!-- Checkbox Colors -->
+<ion-checkbox color="primary"></ion-checkbox>
+<ion-checkbox color="secondary"></ion-checkbox>
+<ion-checkbox color="danger"></ion-checkbox>
+<ion-checkbox color="light"></ion-checkbox>
+<ion-checkbox color="dark"></ion-checkbox>
+
+<!-- Checkboxes in a List -->
+<ion-list>
+  <ion-item *ngFor="let entry of form">
+    <ion-label>{{entry.val}}</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<ion-list mode="ios">
+  <ion-item *ngFor="let c of data"
+  (click)="onClick(c)">
+    <ion-label>{{c.name}}</ion-label>
+    <ion-checkbox slot="end"
+     [(ngModel)]="c.selected"
+    [color]="c.name"
+    >
+  </ion-checkbox>
+  </ion-item>
+</ion-list>
+</ion-content>
